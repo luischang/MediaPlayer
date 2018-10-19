@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reproductor de música"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAdelante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/adelante"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnPausar"
+        app:layout_constraintEnd_toStartOf="@+id/btnPausar"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPausar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pausar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnReproducir"
+        app:layout_constraintEnd_toStartOf="@+id/btnReproducir"
+        app:layout_constraintStart_toEndOf="@+id/btnAdelante" />
+
+    <Button
+        android:id="@+id/btnReproducir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="162dp"
+        android:text="@string/reproducir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnAtras"
+        app:layout_constraintStart_toEndOf="@+id/btnPausar" />
+
+    <Button
+        android:id="@+id/btnAtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="@string/atras"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnReproducir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnReproducir" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="306dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdelante"
+        app:layout_constraintEnd_toEndOf="@+id/btnPausar"
+        app:layout_constraintStart_toEndOf="@+id/btnPausar"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreMusica" />
+
+    <TextView
+        android:id="@+id/tvTiempoRestante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tvDuracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="2dp"
+        android:text="Small Text"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tvNombreMusica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintBottom_toTopOf="@+id/btnPausar"
+        app:layout_constraintEnd_toEndOf="@+id/btnPausar"
+        app:layout_constraintStart_toEndOf="@+id/btnPausar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="203dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="53dp"
+        android:src="@drawable/winamp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="@+id/textview"
+        app:layout_constraintStart_toStartOf="@+id/textview"
+        app:layout_constraintTop_toTopOf="@+id/textview" />
+
+</android.support.constraint.ConstraintLayout>
